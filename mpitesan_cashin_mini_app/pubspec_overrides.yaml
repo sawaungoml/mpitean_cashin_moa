@@ -1,0 +1,7 @@
+# melos_managed_dependency_overrides: core,payment_gateway,intl
+dependency_overrides:
+  core:
+    path: ../packages/core
+  intl: 0.19.0
+  payment_gateway:
+    path: ../packages/payment_gateway

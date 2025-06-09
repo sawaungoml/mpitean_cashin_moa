@@ -1,0 +1,4 @@
+name: mpitesan_cashin_workspace
+packages:
+  - mpitesan_cashin_mini_app
+  - packages/**

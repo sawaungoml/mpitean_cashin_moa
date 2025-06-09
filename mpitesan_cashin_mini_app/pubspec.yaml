@@ -1,0 +1,33 @@
+name: mpitesan_cashin_mini_app
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  xml: ^6.5.0
+  qr_flutter: ^4.1.0
+  dotted_border: ^2.1.0
+  dotted_line: ^3.2.3
+  #core: 1.0.0
+  payment_gateway:
+    path: ../packages/payment_gateway
+  core:
+    path: ../packages/core
+  flutter_secure_storage: ^9.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+dependency_overrides:
+  intl: 0.19.0   
+
+flutter:
+  uses-material-design: true
