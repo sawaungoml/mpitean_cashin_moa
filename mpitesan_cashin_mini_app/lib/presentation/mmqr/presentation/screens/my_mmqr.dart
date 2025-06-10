@@ -304,7 +304,7 @@ class _MMQRCardState extends State<MMQRCard> {
                             });
                       }
                     },
-                    child: Text(isAmount ? "clear" : "add"),
+                    child: Text(isAmount ? "clear" : "add amount"),
                   ),
                   const SizedBox(width: 12),
                   
