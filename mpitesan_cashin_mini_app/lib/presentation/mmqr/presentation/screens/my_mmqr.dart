@@ -51,7 +51,7 @@ class _MyMMQrScreenState extends State<MyMMQrScreen> {
     // Call getUserInfo
     debugPrint("fetching user info");
     try {
-      await userInfoCubit.checkUserInfo("9772661150");
+      await userInfoCubit.checkUserInfo("9973320003");
     } finally {
       // Dismiss progress dialog
       if (mounted && Navigator.canPop(context)) {
@@ -198,13 +198,23 @@ class _MMQRCardState extends State<MMQRCard> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(),
-                            Text(
-                              widget.userInfo.merchantName ?? '',
-                              //style: KStyle.tNameMMQR,
-                              textAlign: TextAlign.center,
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                widget.userInfo.merchantName == "null" || widget.userInfo.merchantName == null ? "": widget.userInfo.merchantName.toString(),
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.black45,
+                                  decoration: TextDecoration.none,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
                             ),
-                            Text("amount $amount")
+                            const Text("",style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.black45,
+                                decoration: TextDecoration.none,
+                              ))
                             // Text(
                             //   amount == 0
                             //       ? 'Scan to input amount'
@@ -214,15 +224,21 @@ class _MMQRCardState extends State<MMQRCard> {
                           ],
                         ),
                       ),
-                      DottedLine(
+                      const DottedLine(
                         dashLength: 2,
                         dashGapLength: 2,
                         lineThickness: 2,
+                        dashColor: Colors.amber,
                         //dashColor: KStyle.cYellowMMQR,
                       ),
                       const SizedBox(height: 12),
-                      Text(
+                      const Text(
                         'MMQR',
+                        style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                                decoration: TextDecoration.none,
+                              )
                         //style: KStyle.tNameMMQR,
                       ),
                       const SizedBox(height: 12),
@@ -239,7 +255,7 @@ class _MMQRCardState extends State<MMQRCard> {
                       Container(
                         height: 12,
                         width: size.width,
-                        color: Colors.grey,
+                        color: Colors.blueGrey,
                       ),
                     ],
                   ),
